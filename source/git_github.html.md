@@ -1,10 +1,10 @@
 ---
 layout: layout
-title: Git та Github
+title:  Git та Github
 
 ---
 
-# Що таке Git та Github
+# Що таке Git та Github?
 
 Дві основні складові на вершині списку, це Git та Github.
 
@@ -46,10 +46,18 @@ Github - це організація, побудована «навколо» `g
 
 ### Де взяти програми
 
-Для початківця, не звиклих працювати з командним рядком знадобляться GUI клієнти:
+####  Ґіт
+Для початківця, не звиклого працювати з командним рядком знадобляться GUI клієнти:
 
-- Вивантажити [Github для Windows](https://windows.github.com/)
-  - читати [допоміжні статті](https://help.github.com/categories/58/articles)
-- Вивантажити [Github для Mac](https://mac.github.com/)
-  - читати [допоміжні статті](https://help.github.com/categories/31/articles)
+- [Github для Windows](https://windows.github.com/)
+  - [документація](https://help.github.com/categories/58/articles)
+- [Github для Mac](https://mac.github.com/)
+  - [документація](https://help.github.com/categories/31/articles)
+  
+ Для тих же, хто себе почуває комфортно командним режимом, git завжди доступний в Лінаксі та на Маку.  Для Віндовса є також [командний рядок](https://msysgit.github.io/), який треба встановлювати додатково. 
+ 
+####  Рубін
+
+Мідлмен і Джекіл написані на мові програмування Рубін (Ruby). Так само в Лінаксі і Маку вона вже або є, або ж встановлюється стандартними засобами. На Віндовсі можна встановити за допомогою [RubyInstaller](http://rubyinstaller.org/)
+
 

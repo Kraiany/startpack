@@ -1,14 +1,50 @@
-p
-  hr
-  small
-    | Опубліковано на
-    a> href="http://pages.github.com/"  GitHub Pages
-    | з використанням
-    a> href="https://github.com/FezVrasta/bootstrap-material-design"  Material Design
-    | для
-    a href="http://getbootstrap.com/"  Bootstrap
+footer.container-narrow
+  .content
+    .row
+      .col-md-4
+        = link_to "https://dmytro.github.io", class: "fa-social"
+          i.fa.fa-home.fa-lg>
 
-p
-  small
-    i Розпочато:
-      Дмитро Ковальов, липень 2014
+        = link_to "https://www.facebook.com/dmytro.kovalov", class: "fa-social"
+          i.fa.fa-facebook-square.fa-lg>
+
+        = link_to "https://plus.google.com/u/0/107895338755271736698/posts", class: "fa-social"
+          i.fa.fa-google-plus-square.fa-lg>
+
+        = link_to "https://github.com/dmytro", class: "fa-social"
+          i.fa.fa-github-square.fa-lg>
+
+        = link_to "mailto:dmytro.kovalov@gmail.com", class: "fa-social"
+          i.fa.fa-envelope-o.fa-lg>
+        span.fa-social Дмитро
+
+        br
+        = link_to "https://www.facebook.com/ukrainians.japan", class: "fa-social"
+          i.fa.fa-facebook-square.fa-lg.fa-social>
+
+        => link_to "https://groups.yahoo.com/neo/groups/kraiany/info", class: "fa-social"
+          <span class="fa-stack fa-social fa-small">
+            <i class="fa fa-square fa-stack-2x "></i>
+            <i class="fa fa-yahoo fa-stack-1x fa-inverse"></i>
+          </span>
+
+          | Краяни
+      .col-md-4.col-md-offset-4
+        p
+          small
+            | Опубліковано на
+            a> href="http://pages.github.com/"  GitHub Pages
+            | з використанням
+            a<> href="https://middlemanapp.com/" Middleman
+            | та
+            a<> href="https://github.com/FezVrasta/bootstrap-material-design"  Material Design
+            | для
+            a href="http://getbootstrap.com/"  Bootstrap
+
+        p
+          small
+            i
+              | Розпочато #{link_to "Дмитро Ковальов", "http://dmytro.github.io"}
+                липень 2014
+              br
+              | Останнє поновлення: #{Time.now}

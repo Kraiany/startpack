@@ -2,5 +2,5 @@
   ul.nav.toc
     h5 Зміст
     - chapters( current_page ).each do |chapter|
-      li= link_to chapter, "##{chapter.downcase.gsub( /\s/, "-" )}"
+      li= link_to chapter.first, "##{chapter.last}"
   hr

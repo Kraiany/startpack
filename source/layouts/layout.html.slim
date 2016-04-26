@@ -4,19 +4,33 @@ html[lang="en"]
     meta[charset="utf-8"]
     title
       = data.page.title
-    <link type="image/png" href="favicon.png" rel="icon" />
+    link type="image/png" href="favicon.png" rel="icon"
     meta[name="viewport" content="width=device-width, initial-scale=1.0"]
     meta[name="description" content="#{data.page.description}"]
     meta[name="author" content="#{data.site.author.name }"]
+    link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
     = stylesheet_link_tag "all.css"
     = partial :fonts
+    javascript:
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-33505287-5', 'auto');
+      ga('send', 'pageview');
 
   body
-
+    nav
+      .navbar-brand
+        = link_to "https://www.facebook.com/ukrainians.japan" do
+          = image_tag "logo.png"
+      h1 Як мати власну веб сторінку на Ґітхабі?
     .container-narrow
       .content
-        h1 Як мати власну веб сторінку на Ґітхабі?
         .row
+          - if current_page.data.title
+            h2= current_page.data.title
           header.well.well-black.col-md-3
             = partial :navigation
           section.col-md-6
@@ -25,11 +39,16 @@ html[lang="en"]
           .col-md-3
             | &nbsp;
 
-    footer.container-narrow
-      .content
+    -if !development?
+      .container-fluid
         .row
-          .col-md-3.col-md-offset-8
-            = partial :footer
+
+          h4 Коментарі
+          .col-md-6.col-md-offset-3
+            = disqus
+            = disqus_count
+
+  = partial :footer
 
     a.btn.btn-fab.btn-material-red-800.btn-raised#toTop href="#"
       i.mdi-action-home
